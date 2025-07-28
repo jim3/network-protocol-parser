@@ -40,7 +40,7 @@ type FrameInterfaceIDTree struct {
 // ----------------------------------------------
 
 func main() {
-	file, err := os.Open("ws.json") // Read the JSON file
+	file, err := os.Open("ws.json")
 	if err != nil {
 		fmt.Printf("Error reading file: %v\n", err)
 	}
