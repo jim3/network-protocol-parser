@@ -1,3 +1,5 @@
-# network-protocol-parser
+### Network Protocol Parser
 
-Parses JSON-exported Wireshark packets
+Parses JSON-exported Wireshark packets.
+
+
