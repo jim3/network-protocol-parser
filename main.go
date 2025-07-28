@@ -59,17 +59,5 @@ func main() {
 
 	for _, v := range p {
 		fmt.Println(v) // {packets-2025-07-28 doc <nil> {{ { {\Device\NPF_{D24C971D-E38B-41A2-832D-D09F94CEF56C} Wi-Fi}}}}}
-		// fmt.Println(v.Index)
-		// fmt.Println(v.Type)
-		// fmt.Println(v.Score)
-		// fmt.Println(v.Source)
-		// fmt.Println(v.Source.Layers.Frames.FrameProtocols)
-		// fmt.Println(v.Source.Layers.Frames.FrameUTC)
 	}
 }
-
-// ----------------------------------------------
-// packets-2025-07-28
-// doc
-// <nil>
-// {{ { {\Device\NPF_{D24C971D-E38B-41A2-832D-D09F94CEF56C} Wi-Fi}}}}
