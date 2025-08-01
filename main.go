@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io"
 	"log"
@@ -73,9 +74,19 @@ type DHCP struct {
 }
 
 func main() {
-	file, err := os.Open("ws.json")
+	// Setup flags
+	inputFile := flag.String("file", "ws.json", "Path to the JSON file to parse")
+	verbose := flag.Bool("verbose", false, "Enable verbose output") // /flag#Bool
+	showTCP := flag.Bool("tcp", false, "Show TCP port information")
+	flag.Parse()
+
+	if _, err := os.Stat(*inputFile); os.IsNotExist(err) {
+		log.Fatalf("Input file does not exist: %s", *inputFile)
+	}
+
+	file, err := os.Open(*inputFile)
 	if err != nil {
-		fmt.Printf("Error reading file: %v\n", err)
+		log.Fatalf("Error reading file: %v\n", err)
 	}
 	defer file.Close()
 
@@ -90,7 +101,17 @@ func main() {
 		log.Println("Error reading json data", err)
 	}
 
+	// Give user flags to control the output
 	for _, v := range p {
-		fmt.Println(v)
+		if *verbose {
+			fmt.Printf("Packet Details:\n%+v\n", v)
+		}
+		if *showTCP {
+			fmt.Printf("TCP Ports - Source: %s, Destination: %s\n",
+				v.Source.Layers.TCP.TCPSourcePort,
+				v.Source.Layers.TCP.TCPDestinationPort)
+		} else {
+			fmt.Printf("Packet from %s to %s\n", v.Source.Layers.IP.IPSource, v.Source.Layers.IP.IPDestination)
+		}
 	}
 }
