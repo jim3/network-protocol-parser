@@ -37,9 +37,8 @@ func main() {
 		log.Println("Error reading json data", err)
 	}
 
-	// Using the methods
 	if *tcpPorts {
-		fmt.Printf("Total TCP packets: %d\n", p.packetCount())
+		fmt.Printf("TCP PACKET COUNT —→ %d\n", p.packetCount())
 		for _, v := range p {
 			if *verbose {
 				fmt.Printf("Packet Details:\n%+v\n", v)

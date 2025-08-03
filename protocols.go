@@ -40,6 +40,7 @@ type Frames struct {
 	FrameUTC             string               `json:"frame.time_utc"`
 	FrameInterfaceIDTree FrameInterfaceIDTree `json:"frame.interface_id_tree"`
 }
+
 type FrameInterfaceIDTree struct {
 	FrameInterfaceName        string `json:"frame.interface_name"`
 	FrameInterfaceDescription string `json:"frame.interface_description"`
@@ -50,6 +51,7 @@ type Ethernet struct {
 	EthernetDST        string             `json:"eth.dst"`
 	EthernetSRC        string             `json:"eth.src"`
 }
+
 type EthernetSourceTree struct {
 	OUIResolved string `json:"eth.src.oui_resolved"`
 }
@@ -62,6 +64,15 @@ type IP struct {
 type TCP struct {
 	TCPSourcePort      string `json:"tcp.srcport"`
 	TCPDestinationPort string `json:"tcp.dstport"`
+}
+
+// Methods for TCP struct
+func (t *TCP) GetSourcePort() string {
+	return t.TCPSourcePort
+}
+
+func (t *TCP) GetDestinationPort() string {
+	return t.TCPDestinationPort
 }
 
 type UDP struct {
