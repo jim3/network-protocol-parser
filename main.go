@@ -31,7 +31,7 @@ func main() {
 		log.Println("Error reading json data", err)
 	}
 
-	// Declares a instance of Packets `type Packets []struct {...}`
+	// Create an instance of Packets
 	var p Packets
 	err = json.Unmarshal(data, &p)
 	if err != nil {
