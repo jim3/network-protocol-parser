@@ -71,10 +71,6 @@ func (t *TCP) GetSourcePort() string {
 	return t.TCPSourcePort
 }
 
-func (t *TCP) GetDestinationPort() string {
-	return t.TCPDestinationPort
-}
-
 type UDP struct {
 	UDPSourcePort      string `json:"udp.srcport"`
 	UDPDestinationPort string `json:"udp.dstport"`
