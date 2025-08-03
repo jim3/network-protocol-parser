@@ -20,5 +20,6 @@ TCP Ports - Source: 12088, Destination: 443
 
 ## TODO
 In order of importance
-- [ ] Create methods for each protocol in the `protocols.go` file
+- [ ] Create methods for each protocol
+- [ ] Create tests for each method (first my attempt at testing!)
 - [ ] Add comments to the code for better understanding

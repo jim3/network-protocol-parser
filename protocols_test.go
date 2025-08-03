@@ -13,6 +13,6 @@ func TestPackets_GetSourcePort(t *testing.T) {
 
 	// Assert
 	if sourcePort != "443" {
-		t.Errorf("GetSourcePort() returned %s, expected %s", sourcePort, "80")
+		t.Errorf("GetSourcePort() returned %s, expected %s", sourcePort, "443")
 	}
 }
