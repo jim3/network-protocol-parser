@@ -10,10 +10,13 @@ import (
 )
 
 func main() {
-	// Setup flags
+	// Command-line flags
 	inputFile := flag.String("file", "ws.json", "Path to the JSON file to parse")
 	verbose := flag.Bool("verbose", false, "Enable verbose output") // /flag#Bool
 	tcpPorts := flag.Bool("tcp", false, "Show TCP port information")
+	ipAddr := flag.Bool("ip", false, "Show IP src and dst addresses")
+	ipLookUp := flag.Bool("iplookup", false, "Lookup IP address info")
+
 	flag.Parse()
 
 	if _, err := os.Stat(*inputFile); os.IsNotExist(err) {
@@ -31,24 +34,30 @@ func main() {
 		log.Println("Error reading json data", err)
 	}
 
-	// Create an instance of Packets
+	// Unmarshal JSON data into Packets struct
 	var p Packets
 	err = json.Unmarshal(data, &p)
 	if err != nil {
 		log.Println("Error reading json data", err)
 	}
+	fmt.Printf("TOTAL TCP PACKET COUNT IS: %d\n", p.packetCount())
 
-	if *tcpPorts {
-		fmt.Printf("TCP PACKET COUNT —→ %d\n", p.packetCount())
-		for _, v := range p {
-			if *verbose {
-				fmt.Printf("Packet Details:\n%+v\n", v)
-			}
-			if *tcpPorts {
-				fmt.Printf("TCP Ports - Source: %s, Destination: %s\n",
-					v.Source.Layers.TCP.TCPSourcePort,
-					v.Source.Layers.TCP.TCPDestinationPort)
-			}
+	// Print packet details based on flags
+	for _, v := range p {
+		if *verbose {
+			fmt.Printf("Packet Details:\n%+v\n", v)
+		}
+		if *tcpPorts {
+			src, dst := v.Source.Layers.TCP.GetSourcePort()
+			fmt.Println(src, dst)
+		}
+		if *ipAddr {
+			s, d := v.Source.Layers.IP.GetIpAddress()
+			fmt.Println(s, d)
+		}
+		if *ipLookUp {
+			// TODO
 		}
 	}
+
 }

@@ -503,6 +503,209 @@
                     },
                     "udp.payload": "01:01:06:00:00:00:3d:1d:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:0b:82:01:fc:42:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:63:82:53:63:35:01:01:3d:07:01:00:0b:82:01:fc:42:32:04:00:00:00:00:37:04:01:03:06:2a:ff:00:00:00:00:00:00:00"
                 },
+                "_index": "packets-2025-08-05",
+                "_type": "doc",
+                "_score": null,
+                "_source": {
+                    "layers": {
+                        "frame": {
+                            "frame.section_number": "1",
+                            "frame.interface_id": "0",
+                            "frame.interface_id_tree": {
+                                "frame.interface_name": "eno1"
+                            },
+                            "frame.encap_type": "1",
+                            "frame.time": "Aug  5, 2025 14:09:10.083920486 EDT",
+                            "frame.time_utc": "Aug  5, 2025 18:09:10.083920486 UTC",
+                            "frame.time_epoch": "1754417350.083920486",
+                            "frame.offset_shift": "0.000000000",
+                            "frame.time_delta": "0.025103869",
+                            "frame.time_delta_displayed": "0.025103869",
+                            "frame.time_relative": "6.911140114",
+                            "frame.number": "39",
+                            "frame.len": "241",
+                            "frame.cap_len": "241",
+                            "frame.marked": "0",
+                            "frame.ignored": "0",
+                            "frame.protocols": "eth:ethertype:ip:udp:dns",
+                            "frame.coloring_rule.name": "UDP",
+                            "frame.coloring_rule.string": "udp"
+                        },
+                        "eth": {
+                            "eth.dst": "34:17:eb:dc:d2:f9",
+                            "eth.dst_tree": {
+                                "eth.dst_resolved": "Dell_dc:d2:f9",
+                                "eth.dst.oui": "3413995",
+                                "eth.dst.oui_resolved": "Dell Inc.",
+                                "eth.addr": "34:17:eb:dc:d2:f9",
+                                "eth.addr_resolved": "Dell_dc:d2:f9",
+                                "eth.addr.oui": "3413995",
+                                "eth.addr.oui_resolved": "Dell Inc.",
+                                "eth.dst.lg": "0",
+                                "eth.lg": "0",
+                                "eth.dst.ig": "0",
+                                "eth.ig": "0"
+                            },
+                            "eth.src": "02:10:18:84:63:f3",
+                            "eth.src_tree": {
+                                "eth.src_resolved": "MS-NLB-PhysServer-16_18:84:63:f3",
+                                "eth.src.oui": "135192",
+                                "eth.addr": "02:10:18:84:63:f3",
+                                "eth.addr_resolved": "MS-NLB-PhysServer-16_18:84:63:f3",
+                                "eth.addr.oui": "135192",
+                                "eth.src.lg": "1",
+                                "eth.lg": "1",
+                                "eth.src.ig": "0",
+                                "eth.ig": "0"
+                            },
+                            "eth.type": "0x0800"
+                        },
+                        "ip": {
+                            "ip.version": "4",
+                            "ip.hdr_len": "20",
+                            "ip.dsfield": "0x00",
+                            "ip.dsfield_tree": {
+                                "ip.dsfield.dscp": "0",
+                                "ip.dsfield.ecn": "0"
+                            },
+                            "ip.len": "227",
+                            "ip.id": "0x3c76",
+                            "ip.flags": "0x02",
+                            "ip.flags_tree": {
+                                "ip.flags.rb": "0",
+                                "ip.flags.df": "1",
+                                "ip.flags.mf": "0"
+                            },
+                            "ip.frag_offset": "0",
+                            "ip.ttl": "59",
+                            "ip.proto": "17",
+                            "ip.checksum": "0x3f75",
+                            "ip.checksum.status": "2",
+                            "ip.src": "108.166.149.3",
+                            "ip.src_host": "108.166.149.3",
+                            "ip.dst": "192.168.0.205",
+                            "ip.dst_host": "192.168.0.205"
+                        },
+                        "udp": {
+                            "udp.srcport": "53",
+                            "udp.dstport": "46474",
+                            "udp.port": "46474",
+                            "udp.length": "207",
+                            "udp.checksum": "0xa969",
+                            "udp.checksum.status": "2",
+                            "udp.stream": "10",
+                            "Timestamps": {
+                                "udp.time_relative": "0.025358888",
+                                "udp.time_delta": "0.025358888"
+                            },
+                            "udp.payload": "96:b1:81:80:00:01:00:07:00:00:00:01:07:73:79:6e:63:2d:76:32:05:62:72:61:76:65:03:63:6f:6d:00:00:01:00:01:c0:0c:00:05:00:01:00:00:00:a2:00:2d:12:73:79:6e:63:2d:61:6c:62:2d:31:35:32:37:36:34:31:33:35:09:75:73:2d:77:65:73:74:2d:32:03:65:6c:62:09:61:6d:61:7a:6f:6e:61:77:73:c0:1a:c0:2f:00:01:00:01:00:00:00:39:00:04:36:45:ed:08:c0:2f:00:01:00:01:00:00:00:39:00:04:23:a0:c0:bc:c0:2f:00:01:00:01:00:00:00:39:00:04:23:a0:ea:b1:c0:2f:00:01:00:01:00:00:00:39:00:04:2c:e7:4d:0b:c0:2f:00:01:00:01:00:00:00:39:00:04:2c:ee:6c:aa:c0:2f:00:01:00:01:00:00:00:39:00:04:36:d6:00:8e:00:00:29:02:00:00:00:00:00:00:00"
+                        },
+                        "dns": {
+                            "dns.id": "0x96b1",
+                            "dns.flags": "0x8180",
+                            "dns.flags_tree": {
+                                "dns.flags.response": "1",
+                                "dns.flags.opcode": "0",
+                                "dns.flags.authoritative": "0",
+                                "dns.flags.truncated": "0",
+                                "dns.flags.recdesired": "1",
+                                "dns.flags.recavail": "1",
+                                "dns.flags.z": "0",
+                                "dns.flags.authenticated": "0",
+                                "dns.flags.checkdisable": "0",
+                                "dns.flags.rcode": "0"
+                            },
+                            "dns.count.queries": "1",
+                            "dns.count.answers": "7",
+                            "dns.count.auth_rr": "0",
+                            "dns.count.add_rr": "1",
+                            "Queries": {
+                                "sync-v2.brave.com: type A, class IN": {
+                                    "dns.qry.name": "sync-v2.brave.com",
+                                    "dns.qry.name.len": "17",
+                                    "dns.count.labels": "3",
+                                    "dns.qry.type": "1",
+                                    "dns.qry.class": "0x0001"
+                                }
+                            },
+                            "Answers": {
+                                "sync-v2.brave.com: type CNAME, class IN, cname sync-alb-152764135.us-west-2.elb.amazonaws.com": {
+                                    "dns.resp.name": "sync-v2.brave.com",
+                                    "dns.resp.type": "5",
+                                    "dns.resp.class": "0x0001",
+                                    "dns.resp.ttl": "162",
+                                    "dns.resp.len": "45",
+                                    "dns.cname": "sync-alb-152764135.us-west-2.elb.amazonaws.com"
+                                },
+                                "sync-alb-152764135.us-west-2.elb.amazonaws.com: type A, class IN, addr 54.69.237.8": {
+                                    "dns.resp.name": "sync-alb-152764135.us-west-2.elb.amazonaws.com",
+                                    "dns.resp.type": "1",
+                                    "dns.resp.class": "0x0001",
+                                    "dns.resp.ttl": "57",
+                                    "dns.resp.len": "4",
+                                    "dns.a": "54.69.237.8"
+                                },
+                                "sync-alb-152764135.us-west-2.elb.amazonaws.com: type A, class IN, addr 35.160.192.188": {
+                                    "dns.resp.name": "sync-alb-152764135.us-west-2.elb.amazonaws.com",
+                                    "dns.resp.type": "1",
+                                    "dns.resp.class": "0x0001",
+                                    "dns.resp.ttl": "57",
+                                    "dns.resp.len": "4",
+                                    "dns.a": "35.160.192.188"
+                                },
+                                "sync-alb-152764135.us-west-2.elb.amazonaws.com: type A, class IN, addr 35.160.234.177": {
+                                    "dns.resp.name": "sync-alb-152764135.us-west-2.elb.amazonaws.com",
+                                    "dns.resp.type": "1",
+                                    "dns.resp.class": "0x0001",
+                                    "dns.resp.ttl": "57",
+                                    "dns.resp.len": "4",
+                                    "dns.a": "35.160.234.177"
+                                },
+                                "sync-alb-152764135.us-west-2.elb.amazonaws.com: type A, class IN, addr 44.231.77.11": {
+                                    "dns.resp.name": "sync-alb-152764135.us-west-2.elb.amazonaws.com",
+                                    "dns.resp.type": "1",
+                                    "dns.resp.class": "0x0001",
+                                    "dns.resp.ttl": "57",
+                                    "dns.resp.len": "4",
+                                    "dns.a": "44.231.77.11"
+                                },
+                                "sync-alb-152764135.us-west-2.elb.amazonaws.com: type A, class IN, addr 44.238.108.170": {
+                                    "dns.resp.name": "sync-alb-152764135.us-west-2.elb.amazonaws.com",
+                                    "dns.resp.type": "1",
+                                    "dns.resp.class": "0x0001",
+                                    "dns.resp.ttl": "57",
+                                    "dns.resp.len": "4",
+                                    "dns.a": "44.238.108.170"
+                                },
+                                "sync-alb-152764135.us-west-2.elb.amazonaws.com: type A, class IN, addr 54.214.0.142": {
+                                    "dns.resp.name": "sync-alb-152764135.us-west-2.elb.amazonaws.com",
+                                    "dns.resp.type": "1",
+                                    "dns.resp.class": "0x0001",
+                                    "dns.resp.ttl": "57",
+                                    "dns.resp.len": "4",
+                                    "dns.a": "54.214.0.142"
+                                }
+                            },
+                            "Additional records": {
+                                "<Root>: type OPT": {
+                                    "dns.resp.name": "<Root>",
+                                    "dns.resp.type": "41",
+                                    "dns.rr.udp_payload_size": "512",
+                                    "dns.resp.ext_rcode": "0x00",
+                                    "dns.resp.edns0_version": "0",
+                                    "dns.resp.z": "0x0000",
+                                    "dns.resp.z_tree": {
+                                        "dns.resp.z.do": "0",
+                                        "dns.resp.z.reserved": "0x0000"
+                                    },
+                                    "dns.resp.len": "0"
+                                }
+                            },
+                            "dns.response_to": "37",
+                            "dns.time": "0.025358888"
+                        }
+                    }
+                },
                 "dhcp": {
                     "dhcp.type": "1",
                     "dhcp.hw.type": "0x01",

@@ -56,20 +56,29 @@ type EthernetSourceTree struct {
 	OUIResolved string `json:"eth.src.oui_resolved"`
 }
 
+// ----------------------------------------------
+
 type IP struct {
 	IPSource      string `json:"ip.src"`
 	IPDestination string `json:"ip.dst"`
 }
+
+func (i *IP) GetIpAddress() (string, string) {
+	return i.IPSource, i.IPDestination
+}
+
+// ----------------------------------------------
 
 type TCP struct {
 	TCPSourcePort      string `json:"tcp.srcport"`
 	TCPDestinationPort string `json:"tcp.dstport"`
 }
 
-// Methods for TCP struct
-func (t *TCP) GetSourcePort() string {
-	return t.TCPSourcePort
+func (t *TCP) GetSourcePort() (string, string) {
+	return t.TCPSourcePort, t.TCPDestinationPort
 }
+
+// ----------------------------------------------
 
 type UDP struct {
 	UDPSourcePort      string `json:"udp.srcport"`
